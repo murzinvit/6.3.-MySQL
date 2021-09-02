@@ -1,6 +1,6 @@
 ### 6.3.-MySQL </br>
 -------------------------------------------------------------------------------------
-#### Задача 1:
+### Задача 1:
 Используя docker поднимите инстанс MySQL (версию 8). Данные БД сохраните в volume: </br>
 1) Загрузка контейнера: `docker pull mysql:latest` </br>
 2) Запуск контейнера: `docker run -d -e MYSQL_ROOT_PASSWORD=pass -v ~/mysql-data:/var/lib/mysql --name mysrv mysql` </br>
@@ -29,3 +29,4 @@
 1) 1 запись с price > 300, запрос: `select price from orders where price > 300` </br>
 [screen](https://github.com/murzinvit/screen/blob/eeafd190f797ccf2e2680ff75c1bf13904d9026d/Mysql_select_result.jpg)
 
+### Задача 2: </br>
