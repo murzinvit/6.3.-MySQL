@@ -45,3 +45,4 @@
 
 ### Задача 3: </br>
 Установите профилирование SET profiling = 1. Изучите вывод профилирования команд SHOW PROFILES;</br>
+Информация по [PROFILES](https://highload.today/kak-ispolzovat-show-profile-v-mysql-3f/) </br> 
