@@ -1,4 +1,4 @@
 #!/bin/bash
-docker stop docker_mysql
-docker rm docker_mysql
-docker run -d --name docker_mysql -p 3306 murzinvit/mysqlserver:latest sleep 60000000000
+docker stop mysrv
+docker rm mysrv
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=pass -v ~/mysql-data:/var/lib/mysql --name mysrv mysql:latest
