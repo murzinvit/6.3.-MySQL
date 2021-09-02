@@ -1,5 +1,7 @@
 ### 6.3.-MySQL </br>
-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+#### Задача 1:
+-------------------------------------------------------------------------------------
 Используя docker поднимите инстанс MySQL (версию 8). Данные БД сохраните в volume: </br>
 1) Загрузка контейнера: `docker pull mysql:latest` </br>
 2) Запуск контейнера: `docker run -d -e MYSQL_ROOT_PASSWORD=pass -v ~/mysql-data:/var/lib/mysql --name mysrv mysql` </br>
@@ -18,3 +20,13 @@
 Найдите команду для выдачи статуса БД и приведите в ответе из ее вывода версию сервера БД. </br>
 #### Команда для получения статуса БД: `status` </br>
 ![screen](https://github.com/murzinvit/screen/blob/abc2a3f6db5769308e626e899ca6fe028c36a206/mysql_status_result.jpg)</br>
+
+Подключитесь к восстановленной БД и получите список таблиц из этой БД: </br>
+1) `mysql -u root -p` </br>
+2) `use test_db` </br>
+3) `show tables` </br>
+
+Приведите в ответе количество записей с price > 300: </br>
+1) 1 запись с price > 300, запрос: `select price from orders where price > 300` </br>
+[screen](https://github.com/murzinvit/screen/blob/eeafd190f797ccf2e2680ff75c1bf13904d9026d/Mysql_select_result.jpg)
+
