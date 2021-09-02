@@ -30,3 +30,13 @@
 [screen](https://github.com/murzinvit/screen/blob/eeafd190f797ccf2e2680ff75c1bf13904d9026d/Mysql_select_result.jpg)
 
 ### Задача 2: </br>
+Создайте пользователя test в БД c паролем test-pass, используя: </br> 
+Документация по запросам [SQL](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html) </br>
+Также запросы хорошо ищуться по названиям полей из таблицы - `use mysql;` , `describe users;` </br>
+1) Создать: `CREATE USER 'test'@'localhost'IDENTIFIED WITH mysql_native_password BY 'test-pass';` </br>
+2) Срок действия пароля: `ALTER USER 'test'@'localhost' PASSWORD EXPIRE INTERVAL 180 DAY;`</br>
+3) Попыток авторизации - 3: `ALTER USER 'test'@'localhost' FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 2;`</br>
+4) Максимальное кол-во запросов в час - 100: `ALTER USER 'test'@'localhost' WITH MAX_QUERIES_PER_HOUR 100;`[док](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html#alter-user-resource-limits)</br>
+5) Дать права на SELECT: `GRANT SELECT ON test_db.* TO 'test'@'localhost';` </br>
+6) Просмотр прав пользователя: `SHOW GRANTS FOR 'test'@'localhost';` </br>
+
