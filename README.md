@@ -36,7 +36,7 @@
 1) Создать: `CREATE USER 'test'@'localhost'IDENTIFIED WITH mysql_native_password BY 'test-pass';` </br>
 2) Срок действия пароля: `ALTER USER 'test'@'localhost' PASSWORD EXPIRE INTERVAL 180 DAY;`</br>
 3) Попыток авторизации - 3: `ALTER USER 'test'@'localhost' FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 2;`</br>
-4) Максимальное кол-во запросов в час - 100: `ALTER USER 'test'@'localhost' WITH MAX_QUERIES_PER_HOUR 100;`[док](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html#alter-user-resource-limits)</br>
+4) Максимальное кол-во запросов в час - 100: `ALTER USER 'test'@'localhost' WITH MAX_QUERIES_PER_HOUR 100;` [документация](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html#alter-user-resource-limits)</br>
 5) Дать права на SELECT: `GRANT SELECT ON test_db.* TO 'test'@'localhost';` </br>
 6) Просмотр прав пользователя: `SHOW GRANTS FOR 'test'@'localhost';` </br>
 
