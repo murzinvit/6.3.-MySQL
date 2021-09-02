@@ -31,7 +31,7 @@
 
 ### Задача 2: </br>
 Создайте пользователя test в БД c паролем test-pass, используя: </br> 
-Документация по запросам [SQL](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html) </br>
+Документация по запросу [ALTER USER](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html) </br>
 Также запросы хорошо ищуться по названиям полей из таблицы - `use mysql;` , `describe users;` </br>
 1) Создать: `CREATE USER 'test'@'localhost'IDENTIFIED WITH mysql_native_password BY 'test-pass';` </br>
 2) Срок действия пароля: `ALTER USER 'test'@'localhost' PASSWORD EXPIRE INTERVAL 180 DAY;`</br>
@@ -39,4 +39,9 @@
 4) Максимальное кол-во запросов в час - 100: `ALTER USER 'test'@'localhost' WITH MAX_QUERIES_PER_HOUR 100;` [документация](https://dev.mysql.com/doc/refman/8.0/en/alter-user.html#alter-user-resource-limits)</br>
 5) Дать права на SELECT: `GRANT SELECT ON test_db.* TO 'test'@'localhost';` </br>
 6) Просмотр прав пользователя: `SHOW GRANTS FOR 'test'@'localhost';` </br>
+7) Атрибуты пользователя: `ALTER USER 'test'@'localhost' ATTRIBUTE '{"Family": "Pretty", "Name": "James"}';`; </br>
+8) Из таблицы INFORMATION_SCHEMA.USER_ATTRIBUTES получите данные по пользователю test: `SELECT * FROM INFORMATION_SCHEMA.USER_ATTRIBUTES WHERE USER = 'test';`</br>
+![screen](https://github.com/murzinvit/screen/blob/ed5000860c6c533136c4198aef8d6835afc08cf8/Mysql_Attributes_User_test.png)
 
+### Задача 3: </br>
+Установите профилирование SET profiling = 1. Изучите вывод профилирования команд SHOW PROFILES;</br>
