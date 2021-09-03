@@ -57,5 +57,6 @@
 ![screen](https://github.com/murzinvit/screen/blob/a951142a58e72600337ea85951ca5c2d8268897c/Mysql_Engine_type.png)
 
 Измените engine и приведите время выполнения и запрос на изменения из профайлера в ответе: </br>
-1) PROFILE для InnoDB для select price from orders where price > 300: `show profiles;`, `show profile for query ID`</br>
+1) PROFILE для InnoDB для запроса: `select price from orders where price > 300;`</br> 
+2) `show profiles;`, `show profile for query ID` </br>
 ![screen](https://github.com/murzinvit/screen/blob/2c4c648b3e7c22027b6b61961e21aa1ff5ce5e38/Mysql_show_profile_InnoDB.png) </br>
