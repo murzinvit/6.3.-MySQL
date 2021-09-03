@@ -52,7 +52,7 @@
 4) Дополнительная информация по запросу: `SHOW PROFILE ALL FOR QUERY 2;` </br>
 
 Исследуйте, какой engine используется в таблице БД test_db и приведите в ответе: </br>
-1) Узнать используемый engine: SHOW TABLE STATUS WHERE Name = 'orders'; </br>
+1) Узнать используемый engine: `SHOW TABLE STATUS WHERE Name = 'orders'\G;` </br>
 Используемый engine - InnoDB; </br>
 ![screen](https://github.com/murzinvit/screen/blob/a951142a58e72600337ea85951ca5c2d8268897c/Mysql_Engine_type.png)
 
@@ -66,4 +66,8 @@
 ### Результаты запроса с MyISAM: </br>
 ![screen](https://github.com/murzinvit/screen/blob/198d5b5902ef6a970333f2657bedaaa82ef7cf23/Mysql_show_query_MyISAM.png)
 
-
+### Задача 4: </br>
+Изучите файл my.cnf в директории /etc/mysql. Измените его согласно ТЗ (движок InnoDB): </br>
+Изменённый [my.cnf]()
+innodb_buffer_pool_size = 24G
+innodb_log_file_size = 100M
