@@ -52,11 +52,18 @@
 4) Дополнительная информация по запросу: `SHOW PROFILE ALL FOR QUERY 2;` </br>
 
 Исследуйте, какой engine используется в таблице БД test_db и приведите в ответе: </br>
-1) Узнать используемый engine: SHOW ENGINES; </br>
+1) Узнать используемый engine: SHOW TABLE STATUS WHERE Name = 'orders'; </br>
 Используемый engine - InnoDB; </br>
 ![screen](https://github.com/murzinvit/screen/blob/a951142a58e72600337ea85951ca5c2d8268897c/Mysql_Engine_type.png)
 
 Измените engine и приведите время выполнения и запрос на изменения из профайлера в ответе: </br>
 1) PROFILE для InnoDB для запроса: `select price from orders where price > 300;` </br> 
 2) `SHOW PROFILES;`   `SHOW PROFILE FOR QUERY id;` </br>
+3) Запрос на изменение engine для таблицы: `ALTER TABLE orders ENGINE = MyISAM;` </br>
+### Результаты запроса с InnoDB: </br>
 ![screen](https://github.com/murzinvit/screen/blob/2c4c648b3e7c22027b6b61961e21aa1ff5ce5e38/Mysql_show_profile_InnoDB.png) </br>
+
+### Результаты запроса с MyISAM: </br>
+![screen](https://github.com/murzinvit/screen/blob/198d5b5902ef6a970333f2657bedaaa82ef7cf23/Mysql_show_query_MyISAM.png)
+
+
