@@ -46,3 +46,16 @@
 ### Задача 3: </br>
 Установите профилирование SET profiling = 1. Изучите вывод профилирования команд SHOW PROFILES;</br>
 Информация по [PROFILES](https://highload.today/kak-ispolzovat-show-profile-v-mysql-3f/) </br> 
+1) Включение профилирования: `mysql -u root -p`, `SET profiling = 1;` </br>
+2) Вывод списка последних запросов с их ID: `SHOW PROFILES;` </br>
+3) Показать профиль запроса c id: `SHOW PROFILE FOR QUERY id;` </br>
+4) Дополнительная информация по запросу: `SHOW PROFILE ALL FOR QUERY 2;` </br>
+
+Исследуйте, какой engine используется в таблице БД test_db и приведите в ответе: </br>
+1) Узнать используемый engine: SHOW ENGINES; </br>
+Используемый engine - InnoDB; </br>
+![screen](https://github.com/murzinvit/screen/blob/a951142a58e72600337ea85951ca5c2d8268897c/Mysql_Engine_type.png)
+
+Измените engine и приведите время выполнения и запрос на изменения из профайлера в ответе: </br>
+1) PROFILE для InnoDB для select price from orders where price > 300: `show profiles;`, `show profile for query ID`</br>
+![screen](https://github.com/murzinvit/screen/blob/2c4c648b3e7c22027b6b61961e21aa1ff5ce5e38/Mysql_show_profile_InnoDB.png) </br>
