@@ -68,7 +68,7 @@
 
 ### Задача 4: </br>
 Изучите файл my.cnf в директории /etc/mysql. Измените его согласно ТЗ (движок InnoDB): </br>
-[my.cnf](https://github.com/murzinvit/6.3_MySQL/blob/13b8449f47a5da7217de4d6f5ab3d8d2afa16948/my.cnf) </br>
+Результат настроек: [my.cnf](https://github.com/murzinvit/6.3_MySQL/blob/13b8449f47a5da7217de4d6f5ab3d8d2afa16948/my.cnf) </br>
 Скорость IO важнее сохранности данных: `innodb_flush_log_at_trx_commit = 2`</br>
 Нужна компрессия таблиц для экономии места на диске: `innodb_file_per_table` </br>
 Буффер кеширования 30% от ОЗУ: `innodb_buffer_pool_size = объем_ОЗУ * 0,3` </br>
