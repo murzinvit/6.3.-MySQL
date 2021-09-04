@@ -54,7 +54,7 @@
 Исследуйте, какой engine используется в таблице БД test_db и приведите в ответе: </br>
 1) Узнать используемый engine: `SHOW TABLE STATUS WHERE Name = 'orders'\G;` </br>
 Используемый engine - InnoDB; </br>
-![screen](https://github.com/murzinvit/screen/blob/a951142a58e72600337ea85951ca5c2d8268897c/Mysql_Engine_type.png)
+![screen](https://github.com/murzinvit/screen/blob/6aa03257315f07f4c952e1d048db920d2d5a6963/Mysql_InnoDB_Show.png)
 
 Измените engine и приведите время выполнения и запрос на изменения из профайлера в ответе: </br>
 1) PROFILE для InnoDB для запроса: `select price from orders where price > 300;` </br> 
