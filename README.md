@@ -2,8 +2,8 @@
 -------------------------------------------------------------------------------------
 ### Задача 1:
 Используя docker поднимите инстанс MySQL (версию 8). Данные БД сохраните в volume: </br>
-1) Загрузка контейнера: `docker pull mysql:latest` </br>
-2) Запуск контейнера: `docker run -d -e MYSQL_ROOT_PASSWORD=pass -v ~/mysql-data:/var/lib/mysql --name mysrv mysql` </br>
+1) Загрузка контейнера: `docker pull mysql:8` </br>
+2) Запуск контейнера: `docker run -d -e MYSQL_ROOT_PASSWORD=pass -v /DATABASE/mysql-data:/var/lib/mysql --name mysrv mysql:8` </br>
 3) Вход в контейнер: `docker exec -it mysrv /bin/bash` </br>
 
 Изучите [бэкап БД](https://github.com/murzinvit/6.3_MySQL/blob/da7841c0c982eb7c4cddc2f5212a2801cd888445/test_dump.sql) и восстановитесь из него: </br>
@@ -87,4 +87,5 @@ tmp_table_size = объем_ОЗУ * 0,3 - размер временного ф�
 max_heap_table_size = объем_ОЗУ * 0,3 - размер              - 
 
 innodb_buffer_pool_size = 24G </br>
-innodb_log_file_size = 100M </br>
+innodb_log_file_size = 100M  - размер файла логов, в сумме даёт 200М, т.к файла 2 </br>
+innodb_file_per_table=1 - хранить каждую таблицу в отдкльном файле ibd* </br>
